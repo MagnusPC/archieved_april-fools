@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="da-DK">
+
+<head>
+  <title>Sådan mindsker du risikoen for at blive snydt på nettet</title>
+  <link rel="stylesheet" href="_blank">
+  <meta charset="UTF-8">
+  
+  <base href="https://ren-digital.neocities.org/" target="_blank">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="description" content="Sikker Digitalisering. Hjælp til at færdes sikkert på internettet. Gode råd til at navigere imellem fake news og fakta, med eksempler.">
+  <meta name="author" content="Ren Digital"> <!--nej, mpc -->
+  
+  <meta http-equiv="content-security-policy" content="_blank">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="default-style" content="_blank">
+  <meta http-equiv="refresh" content="NEVER"> <!--auto refresh is bad practice-->
+  
+  <script> //embedded video player code from developers.google.com/youtube/iframe_api_reference
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'dQw4w9WgXcQ',
+        playerVars: {
+          'playsinline': 1,
+          'controls': 0
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange,
+          'onAutoplayBlocked': onAutoplayBlocked
+        }
+      });
+    }
+    function onPlayerReady(event) {
+      event.target.setVolume(70);
+      event.target.playVideo();
+    }
+    var done = false;
+    var thirdTimeIsTheCharm = 0;
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 201000); // will stop the video at 3 minutes and 21 seconds in - recommends? no thank you
+        done = true;
+      }
+      if (event.data == YT.PlayerState.PAUSED && thirdTimeIsTheCharm < 2) {
+        player.unMute(); // sorry not sorry
+        onPlayerReady(event);
+        thirdTimeIsTheCharm++;
+      }
+      if (event.data == YT.PlayerState.BUFFERING || event.data == YT.PlayerState.PLAYING) {
+        event.target.setVolume(70);
+        PlayerState.unMute();
+      }
+    }
+    function onAutoplayBlocked(event){
+      player.mute();
+      onPlayerReady(event);
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
+  
+  <script> //reveal the menu
+    function myFunction() {
+      document.getElementById("panel").style.display = "block";
+    }
+  </script>
+  
+  <script> //hide the mask image
+    function maskFunc(){
+      document.getElementById("mask").style.display = "none"; // not rly necessary with the redirect
+
+    }
+  </script>
+  
+  <!--<noscript>Sadly, javascript is needed for this April Fools' joke</noscript>
+  -->
+  
+  <style> 
+    body {background-color: black;} 
+    div {color: white;}
+    #mask {position:fixed;z-index:2;width:100%;height:100%;color:white}
+    #player {display:block;margin:auto;width:100%;height:600px;}
+    #panel, .flip{
+    font-size: 16px;
+    padding: 1%;
+    background-color: slategrey;
+    color: white;
+    border: solid 1px lightslategrey;
+    margin: auto;}
+    #panel {display: none;}
+    p {text-align: center;}
+    table {margin:auto;background-color: lightgrey;color:black;}
+    td, th {border-bottom: 2px solid white;padding:5px;vertical-align:bottom;}
+    a:link{color:blue;}
+  </style>
+  
+</head>
+
+<body>
+    <header>
+      <img id="mask" onload="setTimeout(maskFunc, 200)" src="/ebsco_scgrab.png" alt="miniature mask"> <!--from www.ebsco.com/research-starters/information-technology/cybersecurity, slightly modified-->
+    </header>
+    
+    <div id="player"></div>
+    
+    <p class="flip" onmousedown="myFunction()">Spøg til side, her er nogle gode hjemmesider <em>&darr;</em></p>
+    <div id="panel">
+      <table>
+        <colgroup>
+          <col style="background-color:white;">
+        </colgroup>
+        <tr>
+          <th></th>
+          <th>
+            Gode ressourcer
+          </th>
+          <th>
+            Link til ressourcen
+          </th>
+          <th>
+            Beskrivelse af ressourcen
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://neocities.org/"><img src="/neocities.png" alt="hosted by neocities"></a>
+          </td>
+          <td>
+            Sikker Digital, hjemmeside af Styrelsen for Samfundssikkerhed, m.fl.
+          </td>
+          <td>
+            <a href="https://www.sikkerdigital.dk/">https://www.sikkerdigital.dk/</a>
+          </td>
+          <td>
+            <q>På sikkerdigital.dk har vi samlet vigtig viden om informationssikkerhed til dig som er borger, virksomhed eller myndighed. Du bliver klogere på digitale trusler, og får konkrete råd og vejledninger til en mere sikker digital adfærd.</q>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div align='center'><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/zc.php?d=5&amp;id=6559&amp;s=17' border='0' alt='Free Website Hit Counter'></a><br /><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">Free website hit counter</a></small>
+          </div>
+          </td>
+          <td>
+            Guides fra TjekDet, uafhængigt nyhedsmedie.
+          </td>
+          <td>
+            <a href="https://www.tjekdet.dk/guides">https://www.tjekdet.dk/guides</a>
+          </td>
+          <td>
+            <q>TjekDet er hele Danmarks politisk uafhængige faktatjekmedie. Vi faktatjekker påstande i den offentlige debat og korrigerer eller nuancerer, hvor der er behov for det. Opgør med misinformation og desinformation har været TjekDets hovedfokus, siden mediet første gang så dagens lys i november 2016. Her kan du læse mere om os, få indblik i, hvordan vi arbejder, vores økonomiske grundlag, og hvem der står bag mediet.</q>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            Blogopslag fra Aalborg Bibliotekernes hjemmeside
+          </td>
+          <td>
+            <a href="https://www.aalborgbibliotekerne.dk/artikler/alle/voksne/forskning-viser-vacciner-giver-autisme-sandt-eller-falsk">https://www.aalborgbibliotekerne.dk/artikler/alle/voksne/forskning-viser-vacciner-giver-autisme-sandt-eller-falsk</a>
+          </td>
+          <td>
+            <q>5 hurtige tip til at være [kilde-]kritisk</q>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Hav en rigtig god første april! <br>
+            Kh. Magnus
+          </td>
+          <td>
+            Artikel fra Forbrugerrådet Tænk
+          </td>
+          <td>
+            <a href="https://taenk.dk/forbrugerliv/elektronik-og-digitale-tjenester/fupmails-saadan-gennemskuer-du-dem">https://taenk.dk/forbrugerliv/elektronik-og-digitale-tjenester/fupmails-saadan-gennemskuer-du-dem</a>
+          </td>
+          <td>
+            Råd til at gennemskue fupmails, kan selvfølgelig også anvendes på links modtaget i beskeder eller opslag <em>(f.eks. mit facebook opslag)</em>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <em>- Stay magical, be kilde-critical</em>
+          </td>
+          <td>
+            App fra Forbrugerrådet Tænk, m.fl.
+          </td>
+          <td>
+            <a href="https://taenk.dk/om-os/mit-digitale-selvforsvar">https://taenk.dk/om-os/mit-digitale-selvforsvar</a>
+          </td>
+          <td>
+            <q>Med Mit digitale selvforsvar-appen er du opdateret om fup-mails i omløb, falske konkurrencer, registrerede vira-trusler og andet skadelig software.</q> Appen har også guides til, hvis skaden sker.
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <footer>
+    </footer>
+
+</body>
+
+</html>
